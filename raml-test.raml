@@ -1,0 +1,20 @@
+#%RAML 0.8
+title: Helloworld 
+version: 0.8
+baseUri: http://www.helloworld.com/myapi/{version}
+
+/helloWorld:
+  get:
+     description: returns default hello world
+  
+  /{name}:
+     get:
+         description: Retrieve a specific book title
+         responses:
+           200:
+             body:
+               application/json:
+                example: |
+                   {
+                          "returnMessage":"helloReturn"
+                   }
